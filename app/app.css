@@ -45,6 +45,7 @@
     /* border-width: 447px; */
     border: 6px solid red;
 }
+
 .confirm {
     width: 100%;
     position: relative;
@@ -58,6 +59,7 @@
     border: 6px solid red;
     height: auto;
 }
+
 .confirm-div {
     position: absolute;
     background-color: #FF5B57;
@@ -70,6 +72,7 @@
     border-radius: 50%;
     transition: opacity .5s;
 }
+
 .confirm-div:hover {
     opacity: .6;
     transition: opacity .5s;
@@ -117,6 +120,18 @@
     color: #737A6E;
 }
 
+.info {
+    font-family: 'Roboto', sans-serif;
+    font-size: 72px;
+    color: #737A6E;
+}
+
+.small-text {
+    font-family: 'Roboto', sans-serif;
+    font-size: 24px;
+    color: #737A6E;
+}
+
 .online {
     opacity: 0.5;
 }
@@ -125,6 +140,8 @@
     position: absolute;
     margin-top: 9%;
     margin-left: 5%;
+    font-family: 'Roboto', sans-serif;
+    font-size: 24px;
     color: #FFFFFF;
 }
 
