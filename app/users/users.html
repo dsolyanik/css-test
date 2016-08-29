@@ -10,12 +10,15 @@
     <div class="dialog" ng-show="isOpenDialog">
         <div class="confirm-wrapper">
             <img src="images/x.png" ng-click="closeDialog()" class="exit">
-            <div>
-                <img src="images/portraits_square_500x500/14.png" ng-click="confirm(user.id)" class="confirm-image">
+            <div class="confirm">
+                    <img src="images/portraits_square_500x500/14.png" ng-click="confirm(user.id)" class="confirm-image">
+                <div class="confirm-div" ng-click="signIn()">
+                    <p id="p">Yes I am</p>
+                </div>
             </div>
             <div class="greeting"> Hi {{userName}}! Signing in?</div>
 
-            Click your photo to confirm
+            <p id="confirm">Click your photo to confirm</p>
 
         </div>
 

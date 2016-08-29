@@ -45,11 +45,41 @@
     /* border-width: 447px; */
     border: 6px solid red;
 }
+.confirm {
+    width: 100%;
+    position: relative;
+    display: block;
+}
+
 .confirm-image {
     width: 30%;
     min-width: 150px;
     border-radius: 50%;
     border: 6px solid red;
+    height: auto;
+}
+.confirm-div {
+    position: absolute;
+    background-color: #FF5B57;
+    height: 100%;
+    width: 30%;
+    opacity: 0;
+    top: 0;
+    left: 35%;
+    min-width: 150px;
+    border-radius: 50%;
+    transition: opacity .5s;
+}
+.confirm-div:hover {
+    opacity: .6;
+    transition: opacity .5s;
+}
+
+.confirm-div p {
+    color: #fff;
+    text-align: center;
+    font-size: 72px;
+    margin-top: 150px;
 }
 
 .logo-wrapper {

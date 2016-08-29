@@ -5,7 +5,7 @@
         .module('timeclock.users')
         .controller('users.ctrl', Controller);
 
-    function Controller($scope, usersSvc) {
+    function Controller($scope, usersSvc, $timeout) {
 
         $scope.userName = "est";
 
@@ -28,6 +28,13 @@
             
             _.find($scope.users, {id: $scope.id}).online = true;
             $scope.isOpenDialog = false;
+        };
+        
+        $scope.signIn = function () {
+            angular.element(document.querySelector('.greeting')).text("Have a nice day!");
+            angular.element(document.querySelector('#confirm')).text("");
+            $timeout($scope.closeDialog, 1500);
+
         }
 
     }
