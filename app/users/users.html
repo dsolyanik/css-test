@@ -1,9 +1,10 @@
 <div class="wrapper">
     <div class="portrait" ng-repeat="user in users">
         <div class="test">
-            <p class="indicate" ng-show="user.online"> {{user.username}} is here</p>
-            <img src="images/portraits_square_500x500/{{user.id}}.png" ng-click="openDialog(user.id)" class="image"
-                 ng-class="{'online':user.online}">
+            <img src="images/portraits_square_500x500/{{user.id}}.png"  class="image">
+            <div class="indicate" ng-click="openDialog(user.id)" ng-class="{'online':user.online}">
+            <p ng-show="user.online"> {{user.username}} is here</p>
+            </div>
         </div>
     </div>
     <div class="dialog" ng-show="isOpenDialog">
@@ -13,7 +14,7 @@
                 <img src="images/portraits_square_500x500/{{currentUser.id}}.png"
                      class="confirm-image">
                 <div class="confirm-div">
-                    <p id="p">Yes I am</p>
+                    <p>Yes I am</p>
                 </div>
             </div>
 
