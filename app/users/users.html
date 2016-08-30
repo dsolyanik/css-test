@@ -10,7 +10,7 @@
     <div class="dialog" ng-show="isOpenDialog">
         <div class="confirm-wrapper">
             <img src="images/x.png" ng-click="closeDialog()" class="exit">
-            <div class="confirm" ng-click="confirm()">
+            <div class="confirm" ng-click="!greeting && confirm()">
                 <img src="images/portraits_square_500x500/{{currentUser.id}}.png"
                      class="confirm-image">
                 <div class="confirm-div">
@@ -23,7 +23,7 @@
             <div class="greeting" ng-show="greeting && !currentUser.online"> Bye! See you soon!</div>
             <div class="greeting" ng-show="greeting && currentUser.online"> Have a nice day!</div>
 
-            <span class="small-text">Click your photo to confirm</span>
+            <span class="small-text" ng-show="!greeting">Click your photo to confirm</span>
         </div>
     </div>
     <div class="logo-wrapper">
