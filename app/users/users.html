@@ -1,7 +1,7 @@
 <div class="wrapper">
     <div class="portrait" ng-repeat="user in users">
         <div class="test">
-            <span class="indicate" ng-show="user.online"> {{user.username}} is here</span>
+            <p class="indicate" ng-show="user.online"> {{user.username}} is here</p>
             <img src="images/portraits_square_500x500/{{user.id}}.png" ng-click="openDialog(user.id)" class="image"
                  ng-class="{'online':user.online}">
         </div>

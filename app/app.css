@@ -1,3 +1,9 @@
+html, body {
+    height: 100%;
+    margin: 0;
+    font-family: 'Roboto', sans-serif !important;
+    font-size: 16px;
+}
 .dashboard {
     min-height: 100%;
     background-color: #EDEDED;
@@ -23,17 +29,25 @@
     display: inline-block;
     width: 25%;
     min-width: 100px;
-    margin-top: 25px;
-    padding-left: 50px;
+    margin-top: 1.5em;
+    padding-left: 3em;
 }
 
 .test {
+    position: relative;
     display: inline-block;
     background-color: green;
     border-radius: 50%;
+}
 
+.indicate {
+    position: absolute;
+    font-size: 1.5em;
+    color: #FFFFFF;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
     text-align: center;
-
 }
 
 .image {
@@ -43,11 +57,10 @@
     height: 100%;
     /*min-width: 100px;*/
     /* border-width: 447px; */
-    border: 6px solid red;
+    border: 0.33333em solid red;
 }
 
 .confirm {
-    width: 100%;
     position: relative;
     display: block;
 }
@@ -56,7 +69,7 @@
     width: 30%;
     min-width: 150px;
     border-radius: 50%;
-    border: 6px solid red;
+    border: 0.33333em solid red;
     height: auto;
 }
 
@@ -68,6 +81,7 @@
     opacity: 0;
     top: 0;
     left: 35%;
+    transform: translate(-50%, -50%);
     min-width: 150px;
     border-radius: 50%;
     transition: opacity .5s;
@@ -79,15 +93,18 @@
 }
 
 .confirm-div p {
+    position: relative;
     color: #fff;
+    font-size: 4.5em;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
     text-align: center;
-    font-size: 72px;
-    margin-top: 150px;
 }
 
 .logo-wrapper {
     text-align: right;
-    padding: 20px;
+    padding: 1.25em;
     /*height: 100%;*/
     position: relative;
     bottom: 0;
@@ -107,28 +124,20 @@
 
 .exit {
     position: relative;
-    top: 0px;
-    right: 0px;
+    top: 0;
+    right: 0;
     margin-right: -36%;
     width: 3%;
     min-width: 15px;
 }
 
-.greeting {
-    font-family: 'Roboto', sans-serif;
-    font-size: 72px;
-    color: #737A6E;
-}
-
-.info {
-    font-family: 'Roboto', sans-serif;
-    font-size: 72px;
+.greeting, .info {
+    font-size: 4.5em;
     color: #737A6E;
 }
 
 .small-text {
-    font-family: 'Roboto', sans-serif;
-    font-size: 24px;
+    font-size: 1.5em;
     color: #737A6E;
 }
 
@@ -136,16 +145,34 @@
     opacity: 0.5;
 }
 
-.indicate {
-    position: absolute;
-    margin-top: 9%;
-    margin-left: 5%;
-    font-family: 'Roboto', sans-serif;
-    font-size: 24px;
-    color: #FFFFFF;
+@media (max-width: 1080px) {
+    .confirm-div p {
+    font-size: 3.5em;
+    }
 }
 
-html, body {
-    height: 100%;
-    margin: 0;
+@media (max-width: 980px) {
+    .confirm-div p {
+        font-size: 2.5em;
+    }
+}
+@media (max-width: 670px) {
+    .indicate {
+        font-size: 1em;
+    }
+    .confirm-div p {
+        font-size: 1.5em;
+    }
+    .info, .greeting{
+        font-size: 2.5em;
+    }
+    .small-text{
+    font-size: 1.5em;
+    }
+
+}
+@media (max-width: 520px) {
+    .indicate {
+        font-size: 0.85em;
+    }
 }
